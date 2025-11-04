@@ -57,7 +57,7 @@ MiNi Bank는 콘솔 기반의 **은행 시뮬레이션 프로그램**입니다.
 
 ## MiNiBank 프로젝트 Flow
 
-![MiNiBank Flow](./readmeimage/flow1.jpg "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/flow1.jpg "MiNiBank Flow")
 
 ### BankSystem 객체 흐름도
 
@@ -76,7 +76,7 @@ MiNi Bank는 콘솔 기반의 **은행 시뮬레이션 프로그램**입니다.
 
 를 달성했습니다.
 
-![MiNiBank Flow](./readmeimage/userf.jpg "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/userf.jpg "MiNiBank Flow")
 
 > ### 🌐 사용한 컬렉션 프레임워크
 
@@ -129,13 +129,13 @@ Java 컬렉션 프레임워크를 활용했습니다.
 즉, 인터페이스는 **은행 기능의 설계도** 역할을 하고,  
 `BankSystem`은 그 설계도를 보고 **실제로 동작하는 은행 시스템을 만든 구현체**입니다.
 
-![MiNiBank Flow](./readmeimage/bankflow.jpg "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/bankflow.jpg "MiNiBank Flow")
 
 ## 작동UI
 
 > ### 🌐회원가입
 
-![MiNiBank Flow](./readmeimage/singup.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/singup.gif "MiNiBank Flow")
 
 #### 회원가입 예외처리
 
@@ -144,11 +144,11 @@ Java 컬렉션 프레임워크를 활용했습니다.
 - 이미 존재하는 ID면 회원가입 차단
 - 예외 메시지 출력 후 다시 입력 유도
 
-![MiNiBank Flow](./readmeimage/singupException.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/singupException.gif "MiNiBank Flow")
 
 > ### 🌐로그인
 
-![MiNiBank Flow](./readmeimage/login.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/login.gif "MiNiBank Flow")
 
 #### 로그인 예외처리
 
@@ -157,12 +157,12 @@ Java 컬렉션 프레임워크를 활용했습니다.
 - 비밀번호 불일치 시 예외 발생
 - 예외 메시지 출력 후 다시 입력 유도
 
-![MiNiBank Flow](./readmeimage/loginException.gif "MiNiBank Flow")
-![MiNiBank Flow](./readmeimage/loginException1.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/loginException.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/loginException1.gif "MiNiBank Flow")
 
 > ### 🌐계좌 추가 발급
 
-![MiNiBank Flow](./readmeimage/accountAdd.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/accountAdd.gif "MiNiBank Flow")
 
 > ### 🌐송금 (내계좌)
 
@@ -179,11 +179,11 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 계좌가 없는데 삭제하려는 경우
 
-![MiNiBank Flow](./readmeimage/transferException.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/transferException.gif "MiNiBank Flow")
 
 > ### 🌐거래내역
 
-![MiNiBank Flow](./readmeimage/showTransactions.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/showTransactions.gif "MiNiBank Flow")
 
 #### 거래내역 예외처리
 
@@ -198,7 +198,7 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 > ### 🌐계좌 삭제
 
-![MiNiBank Flow](./readmeimage/deleteAccount.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/deleteAccount.gif "MiNiBank Flow")
 
 #### 계좌삭제 예외처리
 
@@ -213,7 +213,7 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 > ### 🌐다른 회원에게 송금과 / 직렬화
 
-![MiNiBank Flow](./readmeimage/a_to_b.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/a_to_b.gif "MiNiBank Flow")
 
 직렬화를 위해 User, Account, Transaction에 Serializable 구현
 
@@ -229,7 +229,7 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 > ### 🌐이벤트
 
-![MiNiBank Flow](./readmeimage/event.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/event.gif "MiNiBank Flow")
 
 ### **추상 클래스 기반 확장 구조**
 
@@ -273,7 +273,7 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 > ### 🌐로그아웃
 
-![MiNiBank Flow](./readmeimage/logout.gif "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/logout.gif "MiNiBank Flow")
 
 로그아웃 합니다.
 
