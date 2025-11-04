@@ -76,7 +76,7 @@ MiNi Bank는 콘솔 기반의 **은행 시뮬레이션 프로그램**입니다.
 
 를 달성했습니다.
 
-![MiNiBank Flow](./readmeImage/userf.jpg "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/userf.JPG "MiNiBank Flow")
 
 > ### 🌐 사용한 컬렉션 프레임워크
 
@@ -129,7 +129,7 @@ Java 컬렉션 프레임워크를 활용했습니다.
 즉, 인터페이스는 **은행 기능의 설계도** 역할을 하고,  
 `BankSystem`은 그 설계도를 보고 **실제로 동작하는 은행 시스템을 만든 구현체**입니다.
 
-![MiNiBank Flow](./readmeImage/bankflow.jpg "MiNiBank Flow")
+![MiNiBank Flow](./readmeImage/bankflow.JPG "MiNiBank Flow")
 
 ## 작동UI
 
