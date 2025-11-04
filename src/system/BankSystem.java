@@ -107,7 +107,7 @@ public class BankSystem implements BankService {
     	    System.out.println("\n===== 👤 " + currentUser.getName() + "님 =====");
     	    System.out.print("1. 계좌 만들기  ");
     	    System.out.print("0. 로그아웃  ");
-    	    System.out.println("5. 🎁 이벤트(가위바위보)");  // ✅ 추가
+    	    System.out.println("5. 🎁 이벤트(가위바위보)");  
  
     	    showAccounts(); // 계좌는 항상 표시
     	    System.out.print("2. 송금  ");
@@ -250,7 +250,7 @@ public class BankSystem implements BankService {
         if (bonus) { 
             acc.deposit(100000);
 
-            // ✅ 계좌 자체에 거래내역 저장
+            // 계좌 자체에 거래내역 저장
             acc.addTransaction(new Transaction(
                     "MINIBANK", 
                     "SYSTEM", 
@@ -326,7 +326,7 @@ public class BankSystem implements BankService {
             toAcc.deposit(money); 
             //Account.java 받는계좌 객체에 입금
 
-            // ✅ A 계좌의 거래 기록 저장 (출금)
+            //  A 계좌의 거래 기록 저장 (출금)
             fromAcc.addTransaction(new Transaction(  
                     //Account.java -> addTransaction (new Transaction()-> 해당 객체가 ) -> addTransaction로 전달.
                     currentUser.getName(),                // Transaction() 보내는 사용자 이름
@@ -338,7 +338,7 @@ public class BankSystem implements BankService {
                     fromAcc.getBalance()                 //잔액
             ));
 
-            // ✅ B 계좌의 거래 기록 저장 (입금)
+            // B 계좌의 거래 기록 저장 (입금)
             toAcc.addTransaction(new Transaction(
                     currentUser.getName(),              // Transaction() 보내는 사용자 이름
                     fromAcc.getAccountNumber(),        //보내는 계좌번호
@@ -362,7 +362,7 @@ public class BankSystem implements BankService {
             System.out.println("❌ 잔액 부족 또는 잘못된 금액");
         }
 
-        // ✅ 뒤로가기 대기 (화면 유지)
+        // 뒤로가기 대기 (화면 유지)
         System.out.println("\n0. 뒤로가기 (메뉴)");
         System.out.print("선택> ");
         String cmd = sc.nextLine();
@@ -423,12 +423,12 @@ public class BankSystem implements BankService {
             }
         }
 
-        // ✅ 메인 메뉴 유지한 상태에서 선택만 기다림
+        // 메인 메뉴 유지한 상태에서 선택만 기다림
         System.out.println("\n0. 뒤로가기 (메뉴로)");
         System.out.print("선택> ");
         String cmd = sc.nextLine();
 
-        // ✅ 아무것도 안 하고 그냥 돌아가기
+        // 아무것도 안 하고 그냥 돌아가기
         if (cmd.equals("0")) {
             System.out.println("(↩ 메인 메뉴로 돌아갑니다)\n");
             return;
@@ -528,7 +528,7 @@ public class BankSystem implements BankService {
   //-----------------------------------------------------------------------------
     //이벤트
  // 이벤트 메뉴
-    private void eventMenu() { // ✅ 이벤트 메뉴
+    private void eventMenu() { // 이벤트 메뉴
         while (true) {
             System.out.println("\n===== 🎮 이벤트 메뉴 =====");
             System.out.println("1. 가위바위보");

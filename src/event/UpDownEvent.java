@@ -22,7 +22,7 @@ public class UpDownEvent extends BankEvent {
   //-------------------------------------------------------------
     @Override
     public int play() {
-        startMessage(); // ✅ 공통 안내문
+        startMessage(); // 공통 안내문
 
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();

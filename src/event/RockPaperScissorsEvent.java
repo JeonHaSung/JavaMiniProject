@@ -23,7 +23,7 @@ public class RockPaperScissorsEvent extends BankEvent {
   //-------------------------------------------------------------
     @Override
     public int play() {
-        startMessage(); // ✅ 공통 안내문 자동 출력
+        startMessage(); // 공통 안내문 자동 출력
 
         Scanner sc = new Scanner(System.in);
         String[] hands = {"가위", "바위", "보"};
@@ -32,7 +32,7 @@ public class RockPaperScissorsEvent extends BankEvent {
         System.out.print("✊ ✌ ✋ 입력 (가위/바위/보): ");
         String user = sc.nextLine().trim();
 
-        // ✅ 입력 검증
+        // 입력 검증
         if (!user.equals("가위") && !user.equals("바위") && !user.equals("보")) {
             System.out.println("⚠️ 잘못 입력 - 보상 없음");
             return 0;
@@ -44,7 +44,7 @@ public class RockPaperScissorsEvent extends BankEvent {
         int base = getBaseReward();
         int bonus = 300; // 승리 시 추가 보상
 
-        // ✅ 결과 판정
+        // 결과 판정
         if (user.equals(com)) {
             System.out.println("🤝 비겼습니다! +" + base + "원 지급!");
             return base;
