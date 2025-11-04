@@ -166,6 +166,8 @@ Java 컬렉션 프레임워크를 활용했습니다.
 
 > ### 🌐송금 (내계좌)
 
+![MiNiBank Flow](./readmeImage/transfer.gif "MiNiBank Flow")
+
 #### 송금 예외처리
 
 - `selectAccount()` 메서드에서 throw로 던진다.
