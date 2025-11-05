@@ -16,8 +16,8 @@ import event.UpDownEvent;
 
 public class BankSystem implements BankService {
 
-    private HashMap<String, User> users;
-    private User currentUser; //로그인된 해당 객체
+    private HashMap<String, User> users; //회원가입 users.put(id, new User(id, pw, name));
+    private User currentUser; //로그인된 해당 객체 // currentUser = users.get(id);
     private Scanner sc = new Scanner(System.in);
     
   //------------------------------------------------------------------------------------------------------ 
@@ -246,7 +246,7 @@ public class BankSystem implements BankService {
   		}
     	  
        }
-
+          //첫계좌 발급시
         if (bonus) { 
             acc.deposit(100000);
 
@@ -390,7 +390,10 @@ public class BankSystem implements BankService {
 
         for (String accNum : currentUser.getAccounts().keySet()) { //hash맵의 Key 값들만 가져옴
             Account acc = currentUser.getAccounts().get(accNum); //key값에 해당하는 객체를 가져와 acc에 담는다.
-            System.out.println(acc.getBalance() + "원" + "\n" + acc.getAccountName() + "  " + accNum );
+            System.out.println(
+            	    String.format("%,d원", acc.getBalance()) + "\n" +
+            	    acc.getAccountName() + "|" + accNum
+            	);
             System.out.println("__________________");
         }
     }
@@ -456,14 +459,14 @@ public class BankSystem implements BankService {
         String[] keys = new String[currentUser.getAccounts().size()]; //User 계좌 해시맵 크기 가져오기 
 
         for (String accNum : currentUser.getAccounts().keySet()) { //User 계좌 해시맵에서 Key만 가지고 온다 계좌번호들
-            Account acc = currentUser.getAccounts().get(accNum); // 계좌번호 전부 담기 
+            Account acc = currentUser.getAccounts().get(accNum); // User.java에서<해시맵> accNum 키값에 맞는 Account 객체를 가지고 온다.
             System.out.println(index + ". " + acc.getBalance() + "원  | " + acc.getAccountName() + " | " + accNum);
-            keys[index - 1] = accNum; //인덱스에 계좌 담기 -1인이유 0부터 배열을 가져오기 위함 프린트에서는 1번 항목 선택을 위해
+            keys[index - 1] = accNum; 
             index++;
         }
 
         System.out.print("번호 선택 > ");
-        int sel = sc.nextInt(); //선택
+        int sel = sc.nextInt(); //계좌리스트 중에 동작할 번호 입력으로 선택 
         sc.nextLine();
 
         if (sel < 1 || sel > keys.length) {
@@ -536,8 +539,14 @@ public class BankSystem implements BankService {
             System.out.println("0. 뒤로가기");
             System.out.print("선택> ");
 
-            int sel = sc.nextInt();
-            sc.nextLine();
+            int sel = -1; 
+            String input = sc.nextLine(); 
+
+            try {
+                sel = Integer.parseInt(input); 
+            } catch (NumberFormatException e) {
+              
+            }
 
             if (sel == 0) {
                 System.out.println("메인 메뉴로 이동");

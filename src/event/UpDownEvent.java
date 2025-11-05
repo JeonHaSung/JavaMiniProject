@@ -11,7 +11,7 @@ public class UpDownEvent extends BankEvent {
 //-------------------------------------------------------------
     @Override
     public String getEventDescription() {
-        return "1 ~ 20 사이의 숫자를 맞추면 보상을 드립니다!\n"
+        return "1 ~ 50 사이의 숫자를 맞추면 보상을 드립니다!\n"
              + "정답을 맞추면 기본 보상 지급!";
     }
   //-------------------------------------------------------------
@@ -27,11 +27,11 @@ public class UpDownEvent extends BankEvent {
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
 
-        int answer = rnd.nextInt(20) + 1; // 1~20
+        int answer = rnd.nextInt(50) + 1; // 1~30
         int attempts = 5; // 기회 5번
 
         System.out.println("🎯 숫자 맞추기 게임 시작!");
-        System.out.println("👉 1 ~ 20 사이 숫자를 맞춰보세요!");
+        System.out.println("👉 1 ~ 50 사이 숫자를 맞춰보세요!");
         System.out.println("⏳ 기회: " + attempts + "번");
 
         while (attempts-- > 0) {
@@ -49,7 +49,6 @@ public class UpDownEvent extends BankEvent {
 
             if (guess == answer) {
                 System.out.println("🎉 정답입니다!");
-                System.out.println("💰 +" + getBaseReward() + "원 지급!");
                 return getBaseReward();
             }
             else if (guess < answer) {
